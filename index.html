@@ -12,86 +12,89 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-left" id="mainNav">
             <div class="container px-4">
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#page-top">Brain Computation</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">What?</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Demo</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Paper</a></li>
                     </ul>
                 </div>
-                <a class="navbar-brand" href="#page-top">Brain Computation</a>
+                <!-- <a class="navbar-brand" href="#page-top">Brain Computation</a> -->
             </div>
         </nav>
-        <!-- Header-->
-        <header class="bg-primary bg-gradient text-dark">
-            <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Brain Computation with Assemblies of Neurons</h1>
-                <p class="lead">An interactive demo for simulating and visualising brain assemblies</p>
-                <!-- <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a> -->
-            </div>
-        </header>
-        <!-- About section-->
-        <section id="about">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>What is Brain Computation?</h2>
-                        <p class="lead">
-                            Brain computation is a biologically inspired model allowing for high level manipulation of brain functions by simulating low level brain functions. It draws inspiration from Hebbian plasticity and various brain imaging studies.
-                            <br>
-                            <br>
-                            The brain is modelled with areas of neurons, each of which has a certain number of neurons. Neurons in each area are connected to each-other by a synapse with probability p, and the same is true for neurons across certain areas that we choose.
-                            <br>
-                            <br>
-                            In each area, neurons can be activated by firing synapses pointing into them, with the restriction that only the k most highly activated neurons in each area can be activated. Additionally, much like in Hebbian plasticity, if a neuron fires in the previous timestep, and another connected by a synapse fires in the next timestep, then the synapse strength is multiplied by beta.
-                            <br>
-                            <br>
-                            We call the operation of firing the k highest activated neurons in an area to another 'projection', and this naturally causes the formation of densly intraconnected groups of neurons which we call 'assemblies'. Assemblies can represent any concept from numbers to images, and form the high level building blocks of the architecture. By performing specific operations on these assemblies, we can provably perform arbitrary computation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services section-->
-        <section class="bg-light" id="services">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Demo</h2>
-                    </div>
-                </div>
+        <div id="mainbody">
+            <!-- Header-->
+            <header class="bg-primary bg-gradient text-dark">
                 <div class="container px-4 text-center">
-                    <a class="btn btn-lg btn-light" href="http://brain.cc.gatech.edu/brain">Full Page Demo</a>
+                    <h1 class="fw-bolder">Brain Computation with Assemblies of Neurons</h1>
+                    <p class="lead">An interactive demo for simulating and visualising brain assemblies</p>
+                    <!-- <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a> -->
                 </div>
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <iframe src="http://brain.cc.gatech.edu/brain" width=100% height=600px allowfullscreen="allowfullscreen"></iframe>
+            </header>
+            <!-- About section-->
+            <section id="about">
+                <div class="container px-4">
+                    <div class="row gx-4 justify-content-center">
+                        <div class="col-lg-8">
+                            <h2>What is Brain Computation?</h2>
+                            <p class="lead">
+                                Brain computation is a biologically inspired model allowing for high level manipulation of brain functions by simulating low level brain functions. It draws inspiration from Hebbian plasticity and various brain imaging studies.
+                                <br>
+                                <br>
+                                The brain is modelled with areas of neurons, each of which has a certain number of neurons. Neurons in each area are connected to each-other by a synapse with probability p, and the same is true for neurons across certain areas that we choose.
+                                <br>
+                                <br>
+                                In each area, neurons can be activated by firing synapses pointing into them, with the restriction that only the k most highly activated neurons in each area can be activated. Additionally, much like in Hebbian plasticity, if a neuron fires in the previous timestep, and another connected by a synapse fires in the next timestep, then the synapse strength is multiplied by beta.
+                                <br>
+                                <br>
+                                We call the operation of firing the k highest activated neurons in an area to another 'projection', and this naturally causes the formation of densly intraconnected groups of neurons which we call 'assemblies'. Assemblies can represent any concept from numbers to images, and form the high level building blocks of the architecture. By performing specific operations on these assemblies, we can provably perform arbitrary computation.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Contact section-->
-        <section id="contact">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Original Paper</h2>
-                        <p class="lead">
-                            <a href="https://www.pnas.org/content/117/25/14464">
-                            Papadimitriou, C. H., Vempala, S. S., Mitropolsky, D., Collins, M., & Maass, W. (2020). Brain computation by assemblies of neurons. Proceedings of the National Academy of Sciences, 117(25), 14464-14472.</a>
-                        </p>
+            </section>
+            <!-- Services section-->
+            <section class="bg-light" id="services">
+                <div class="container px-4">
+                    <div class="row gx-4 justify-content-center">
+                        <div class="col-lg-8">
+                            <h2>Demo</h2>
+                        </div>
+                    </div>
+                    <div class="container px-4 text-center">
+                        <a class="btn btn-lg btn-light" href="http://brain.cc.gatech.edu/brain">Full Page Demo</a>
+                    </div>
+                    <div class="row gx-4 justify-content-center">
+                        <div class="col-lg-8">
+                            <iframe src="http://brain.cc.gatech.edu/brain" width=100% height=600px allowfullscreen="allowfullscreen"></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+            </section>
+            <!-- Contact section-->
+            <section id="contact">
+                <div class="container px-4">
+                    <div class="row gx-4 justify-content-center">
+                        <div class="col-lg-8">
+                            <h2>Original Paper</h2>
+                            <p class="lead">
+                                <a href="https://www.pnas.org/content/117/25/14464">
+                                Papadimitriou, C. H., Vempala, S. S., Mitropolsky, D., Collins, M., & Maass, W. (2020). Brain computation by assemblies of neurons. Proceedings of the National Academy of Sciences, 117(25), 14464-14472.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer-->
+            <footer class="py-5 bg-dark">
+            </footer>
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="js/scripts.js"></script>
+        </div>
     </body>
 </html>

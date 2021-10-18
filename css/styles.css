@@ -4038,9 +4038,10 @@ textarea.form-control-lg {
 .navbar > .container-xl,
 .navbar > .container-xxl {
   display: flex;
-  flex-wrap: inherit;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: top;
   justify-content: space-between;
+  text-align: center;
 }
 .navbar-brand {
   padding-top: 0.3125rem;
@@ -4227,7 +4228,7 @@ textarea.form-control-lg {
     justify-content: flex-start;
   }
   .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
+    flex-direction: column;
   }
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
@@ -6516,11 +6517,12 @@ textarea.form-control-lg {
   --bs-aspect-ratio: calc(9 / 21 * 100%);
 }
 
-.fixed-top {
+.fixed-left {
   position: fixed;
   top: 0;
-  right: 0;
+  /*right: 0;*/
   left: 0;
+  bottom: 0;
   z-index: 1030;
 }
 
@@ -11292,4 +11294,9 @@ header {
 section {
   padding-top: 9rem;
   padding-bottom: 9rem;
+}
+
+.page-top {
+  display: flex;
+  flex-direction: row;
 }
