@@ -46,6 +46,19 @@ a:focus {
     margin: 40px 0;
 }
 
+.img-btn {
+    align-self: flex-end;
+    background-image: url("fullscreen-button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20px;
+}
+
+.democontainer {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: horizontal;
+}
 
 .thinline {
     width: 100%;
