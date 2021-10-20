@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <meta charset="UTF-8">
   <title>Brain Computation</title>
   <!-- Bootstrap CSS CDN -->
@@ -87,16 +89,16 @@
 
             <h2 id="about"></h2>
                             <p class="lead">
-                                Brain computation is a biologically inspired model allowing for high level manipulation of brain functions by simulating low level brain functions. It draws inspiration from Hebbian plasticity and various brain imaging studies.
+                                The brain is modeled by a set of brain areas, each with a certain number of neurons \(n\). Neurons within area are connected by a random directed graph; each directed edge is chosen independently with probability \(p\). Areas can be connected to each other by random directed bipartite graphs. 
                                 <br>
                                 <br>
-                                The brain is modelled with areas of neurons, each of which has a certain number of neurons. Neurons in each area are connected to each-other by a synapse with probability p, and the same is true for neurons across certain areas that we choose.
+                                Neurons can be activated at discrete time steps based on the activity of neurons connected to them by synapses, which start with uniform weights that can change over time. At each time step, the \(k\) neurons in each area with the most weighted input are activated. Synapse weights change via Hebbian plasticity --- if neuron \(a\) and \(b\) fire in consecutive time steps, then the synapse connecting \(a\) to \(b\) (if present) increases its weight by a multiplicative factor \(\beta\). 
                                 <br>
                                 <br>
-                                In each area, neurons can be activated by firing synapses pointing into them, with the restriction that only the k most highly activated neurons in each area can be activated. Additionally, much like in Hebbian plasticity, if a neuron fires in the previous timestep, and another connected by a synapse fires in the next timestep, then the synapse strength is multiplied by beta.
+                                Projection refers to the repeated activation of a set of neurons in one area (possibly an external sensory area with no recurrent connections) and this activates neurons in a different area; the activated subset converges to an almost stable subset, which is termed an assembly. Assemblies are more densely interconnected than the underlying area. Assemblies represent concepts, ranging from specific things like numbers or images, to more abstract memories like circles. Assemblies come with a repertoire of operations, the Assembly Calculus, which includes Projection, Recall, Association, Pattern Completion, and Merge. 
                                 <br>
                                 <br>
-                                We call the operation of firing the k highest activated neurons in an area to another 'projection', and this naturally causes the formation of densly intraconnected groups of neurons which we call 'assemblies'. Assemblies can represent any concept from numbers to images, and form the high level building blocks of the architecture. By performing specific operations on these assemblies, we can provably perform arbitrary computation.
+                                Assemblies can be formed hierarchically. A constant number of brain areas with \(n\) neurons each can in principle simulate arbitrary Turing machine computations that take up to \(\sqrt{n}\) space. Perhaps more interestingly, these simple operations lead to learning of well-separated concept classes (one assembly per class), and a skeleton architecture for the parsing and generation of language.
                             </p>
 
             <div class="line"></div>
